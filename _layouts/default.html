@@ -6,20 +6,20 @@
   <title>{{ page.title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="/css/normalize.css">
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/normalize.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/syntax.css">
 </head>
 <body>
 <header class="header">
   <div class="logo">
-    <a href="/"><img src="/images/logo.png" alt="{{ site.name }}" width="80" height="80"></a>
+    <a href="{{ site.baseurl }}"><img src="{{ site.baseurl }}/images/logo.png" alt="{{ site.name }}" width="80" height="80"></a>
   </div>
   <nav class="navigation">
     <ul class="navigation-list">
-      <li class="navigation-item"><a class="navigation-link {% if page.section == 'community' %}active{% endif %}" href="/">Сообщество</a></li>
-      <li class="navigation-item"><a class="navigation-link {% if page.section == 'events' %}active{% endif %}" href="/events">Мероприятия</a></li>
-      <li class="navigation-item"><a class="navigation-link {% if page.section == 'sponsors' %}active{% endif %}" href="/sponsors">Спонсоры</a></li>
+      <li class="navigation-item"><a class="navigation-link {% if page.section == 'community' %}active{% endif %}" href="{{ site.baseurl }}">Сообщество</a></li>
+      <li class="navigation-item"><a class="navigation-link {% if page.section == 'events' %}active{% endif %}" href="{{ site.baseurl }}/events">Мероприятия</a></li>
+      <li class="navigation-item"><a class="navigation-link {% if page.section == 'sponsors' %}active{% endif %}" href="{{ site.baseurl }}/sponsors">Спонсоры</a></li>
     </ul>
   </nav>
 </header>
