@@ -1,0 +1,157 @@
+/*****************************************************************************/
+/*
+/* Common
+/*
+/*****************************************************************************/
+
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,300,600&subset=latin,cyrillic');
+
+$sidebar-width = 300px;
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    color: #888;
+    background-color: white;
+    font: 14pt 'Open Sans', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+}
+
+/*****************************************************************************/
+/*
+/* Sidebar
+/*
+/*****************************************************************************/
+
+.header {
+    float: left;
+    width: $sidebar-width;
+    min-height: 100%;
+
+    background-color: #222729;
+}
+
+.logo {
+    margin: 1.75em 1.5em 1.5em 1.5em;
+    text-align: right;
+}
+
+.navigation {
+    line-height: 2;
+    text-align: right;
+
+    &-list {
+        padding: 0;
+        list-style: none;
+    }
+
+    &-item {
+        margin: 0;
+    }
+
+    &-link {
+        display: block;
+        padding: 0.5em 1.5em 0.5em 1.5em;
+        color: rgba(255, 255, 255, 0.5);
+        text-decoration: none;
+
+        &:hover {
+            color: white;
+        }
+
+        &.active {
+            background: rgba(0, 0, 0, 0.15);
+            color: white;
+        }
+    }
+}
+
+/*****************************************************************************/
+/*
+/* Content
+/*
+/*****************************************************************************/
+
+section() {
+    padding: 0 85px;
+}
+
+.content {
+    margin-left: $sidebar-width;
+    overflow: auto;
+
+    &-section {
+        section();
+    }
+}
+
+
+/*****************************************************************************/
+/*
+/* Events
+/*
+/*****************************************************************************/
+
+.event {
+    &-section {
+        section();
+        background-color: #f5fafa;
+
+        &.future {
+            background-color: white;
+        }
+    }
+}
+
+/*****************************************************************************/
+/*
+/* Fellows
+/*
+/*****************************************************************************/
+
+$fellow-margin = 20px;
+
+.fellow {
+    &-section {
+        section();
+
+        overflow: auto;
+        background-color: #f5fafa;
+    }
+
+    &-list {
+        padding: 0;
+        list-style: none;
+        margin-left: -($fellow-margin);
+    }
+
+    &-box {
+        display: block;
+        float: left;
+        box-sizing: border-box;
+        width: 20%;
+        padding-left: $fellow-margin;
+        margin-bottom: $fellow-margin;
+    }
+
+    &-card {
+        height: 160px;
+        background-color: white;
+        box-shadow: 0 0.05em 0.15em 0 rgba(0, 0, 0, 0.05);
+        text-align: center;
+        overflow: hidden;
+    }
+
+    &-picture {
+        display: block;
+        width: 100%;
+    }
+
+    &-name {
+        font-size: 0.8em;
+        padding: 1em 0 1em 0;
+    }
+}

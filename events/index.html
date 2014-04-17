@@ -1,0 +1,54 @@
+---
+layout: default
+title: Мероприятия
+section: events
+---
+
+{% assign has_future_events = false %}
+{% for event in site.categories.events %}
+  {% if site.time > event.date %}
+    {% assign has_future_events = true %}
+  {% endif %}
+{% endfor %}
+
+{% if has_future_events %}
+<section class="event-section future">
+  <header>
+    <h1>Будущие мероприятия</h1>
+  </header>
+
+  <article>
+    {% for event in site.categories.events %}
+      {% if event.date > site.time %}
+        <section class="event">
+          <header>
+            <h3><a href="{{ event.url }}" title="{{ event.title }}">{{ event.title }}</a></h3>
+            <small>{{ event.date  | date: "%-d %B %Y в %R" }}</small>
+          </header>
+          <article>{{ event.excerpt }}</article>
+        </section>
+      {% endif %}
+    {% endfor %}
+  </article>
+</section>
+{% endif %}
+
+<section class="event-section">
+  <header>
+    <h1>Прошедшие мероприятия</h1>
+  </header>
+
+  <article>
+    {% for event in site.categories.events %}
+      {% unless event.date > site.time %}
+        <section class="event">
+          <header>
+            <h3><a href="{{ event.url }}" title="{{ event.title }}">{{ event.title }}</a></h3>
+            <small>{{ event.date  | date: "%-d %B %Y в %R" }}</small>
+          </header>
+          <article>{{ event.excerpt }}</article>
+        </section>
+      {% endunless %}
+    {% endfor %}
+  </article>
+</section>

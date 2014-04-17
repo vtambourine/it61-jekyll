@@ -1,0 +1,6 @@
+name: Ростовское IT-сообщество
+description: A description for your blog
+url: http://your-blog-url.example.com
+markdown: redcarpet
+pygments: true
+future: true

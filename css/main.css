@@ -1,0 +1,120 @@
+/*****************************************************************************/
+/*
+/* Common
+/*
+/*****************************************************************************/
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,600&subset=latin,cyrillic");
+html,
+body {
+  height: 100%;
+}
+body {
+  color: #888;
+  background-color: #fff;
+  font: 14pt 'Open Sans', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+/*****************************************************************************/
+/*
+/* Sidebar
+/*
+/*****************************************************************************/
+.header {
+  float: left;
+  width: 300px;
+  min-height: 100%;
+  background-color: #222729;
+}
+.logo {
+  margin: 1.75em 1.5em 1.5em 1.5em;
+  text-align: right;
+}
+.navigation {
+  line-height: 2;
+  text-align: right;
+}
+.navigation-list {
+  padding: 0;
+  list-style: none;
+}
+.navigation-item {
+  margin: 0;
+}
+.navigation-link {
+  display: block;
+  padding: 0.5em 1.5em 0.5em 1.5em;
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+}
+.navigation-link:hover {
+  color: #fff;
+}
+.navigation-link.active {
+  background: rgba(0,0,0,0.15);
+  color: #fff;
+}
+/*****************************************************************************/
+/*
+/* Content
+/*
+/*****************************************************************************/
+.content {
+  margin-left: 300px;
+  overflow: auto;
+}
+.content-section {
+  padding: 0 85px;
+}
+/*****************************************************************************/
+/*
+/* Events
+/*
+/*****************************************************************************/
+.event-section {
+  padding: 0 85px;
+  background-color: #f5fafa;
+}
+.event-section.future {
+  background-color: #fff;
+}
+/*****************************************************************************/
+/*
+/* Fellows
+/*
+/*****************************************************************************/
+.fellow-section {
+  padding: 0 85px;
+  overflow: auto;
+  background-color: #f5fafa;
+}
+.fellow-list {
+  padding: 0;
+  list-style: none;
+  margin-left: -20px;
+}
+.fellow-box {
+  display: block;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 20%;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+.fellow-card {
+  height: 160px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0.05em 0.15em 0 rgba(0,0,0,0.05);
+  box-shadow: 0 0.05em 0.15em 0 rgba(0,0,0,0.05);
+  text-align: center;
+  overflow: hidden;
+}
+.fellow-picture {
+  display: block;
+  width: 100%;
+}
+.fellow-name {
+  font-size: 0.8em;
+  padding: 1em 0 1em 0;
+}
