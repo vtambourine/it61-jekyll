@@ -7,15 +7,19 @@ layout: default
   <header class="event-header">
     <h2>{{ page.title }}</h2>
     {% unless page.place == blank %}<p class="event-meta"><em>Место:</em>{{ page.place }}</p>{% endunless %}
-    {% unless page.date == blank %}<p class="event-meta"><em>Начало:</em> {{ page.date | date: "%-d %B %Y в %R" }}</p>{% endunless %}
+    {% unless page.date == blank %}<p class="event-meta"><em>Начало:</em>{{ page.date | date: "%-d %B %Y в %R" }}</p>{% endunless %}
+    {% unless page.speakers.empty? %}
+      <p class="event-meta">
+        <em>Докладчики:</em>
+        {% for fellow in site.data.fellows %}
+          {% if page.speakers contains fellow.username %}
+            {{ fellow.name }} {% unless forloop.last %}·{% endunless %}
+          {% endif %}
+        {% endfor %}
+      </p>
+    {% endunless %}
   </header>
   {% endunless %}
-
-  {% for fellow in site.data.fellows %}
-    {% if page.speakers contains fellow.username %}
-      {{ fellow.name }}<br>
-    {% endif %}
-  {% endfor %}
 
   <article>
     {{ content }}

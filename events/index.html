@@ -23,7 +23,7 @@ section: events
         <section class="event">
           <header>
             <h3><a href="{{ site.baseurl }}{{ event.url }}" title="{{ event.title }}">{{ event.title }}</a></h3>
-            <small>{{ event.date  | date: "%-d %B %Y в %R" }}</small>
+            <small>{{ event.date | date: "%-d %B %Y в %R" }}</small>
           </header>
           <article>{{ event.excerpt }}</article>
         </section>
