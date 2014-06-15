@@ -10,18 +10,3 @@ title: Ростовское IT-сообщество
   <p>У лукоморья дуб зеленый. Златая цепь на дубе том. И дем, и ночью кот ученый все ходит по цепи кругом. Идет направо — песнь заводит. Налево — сказку говорит. Там чудеса; там леший бродит; русалка на ветвях сидит.</p>
 </section>
 
-<section class="fellow-section">
-  <header>
-    <h1>Участники</h1>
-  </header>
-  <ul class="fellow-list">
-    {% for fellow in site.data.fellows %}
-    <li class="fellow-box">
-      <div class="fellow-card">
-        <a href="{{ fellow.site }}" title="{{ fellow.name }}"><img class="fellow-picture" src="" alt="{{ fellow.name }}"></a>
-        <header class="fellow-name">{{ fellow.name }}</header>
-      </div>
-    </li>
-    {% endfor %}
-  </ul>
-</section>

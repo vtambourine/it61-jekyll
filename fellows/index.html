@@ -1,0 +1,16 @@
+---
+layout: section
+title: Участники
+section: fellow
+---
+
+<ul class="fellow-list">
+  {% for fellow in site.data.fellows %}
+  <li class="fellow-box">
+    <a class="fellow-card" href="{{ site.baseurl }}/fellows/fellow.html" title="{{ fellow.name }}">
+      <img class="fellow-card-picture dummy" src="/images/dummy.png" alt="{{ fellow.name }}">
+      <header class="fellow-name">{{ fellow.name }}</header>
+    </a>
+  </li>
+  {% endfor %}
+</ul>

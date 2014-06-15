@@ -3,5 +3,5 @@ description: A description for your blog
 url: http://vtambourine.github.io/it61-jekyll
 baseurl: /it61-jekyll
 markdown: redcarpet
-pygments: true
+highlighter: true
 future: true

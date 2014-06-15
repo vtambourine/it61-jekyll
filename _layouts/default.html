@@ -12,14 +12,27 @@
 </head>
 <body>
 <header class="header">
-  <div class="logo">
-    <a href="{{ site.baseurl }}"><img src="{{ site.baseurl }}/images/logo.png" alt="{{ site.name }}" width="80" height="80"></a>
+  <h1 class="logo">
+    <a class="logo-link" href="/"><img class="logo-image" src="/images/logo-it61.png" alt="Ростовское IT-сообщество" width="80" height="80"></a>
+    <div>Ростовское IT-сообщество</div>
+  </h1>
+
+  <div class="user">
+    <div class="user-info">
+      <div class="user-name">
+        Полковник Аурелиано Буэндиа
+        <img class="user-picture dummy"  width="48" height="48">
+      </div>
+    </div>
+    <div class="user-singin"><a href="/registration">Регистрация</a>  ●  <a href="/registration">Вход/Выход</a></div>
   </div>
+
   <nav class="navigation">
     <ul class="navigation-list">
-      <li class="navigation-item"><a class="navigation-link {% if page.section == 'community' %}active{% endif %}" href="{{ site.baseurl }}">Сообщество</a></li>
       <li class="navigation-item"><a class="navigation-link {% if page.section == 'events' %}active{% endif %}" href="{{ site.baseurl }}/events">Мероприятия</a></li>
-      <li class="navigation-item"><a class="navigation-link {% if page.section == 'sponsors' %}active{% endif %}" href="{{ site.baseurl }}/sponsors">Спонсоры</a></li>
+      <li class="navigation-item"><a class="navigation-link {% if page.section == 'community' %}active{% endif %}" href="{{ site.baseurl }}/fellows">Люди</a></li>
+      <li class="navigation-item"><a class="navigation-link {% if page.section == 'sponsors' %}active{% endif %}" href="{{ site.baseurl }}/sponsors">Пожертвования</a></li>
+      <li class="navigation-item"><a class="navigation-link {% if page.section == 'sponsors' %}active{% endif %}" href="{{ site.baseurl }}/sponsors">О сайте</a></li>
     </ul>
   </nav>
 </header>

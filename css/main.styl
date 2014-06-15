@@ -21,6 +21,10 @@ body {
     font-weight: 300;
 }
 
+:link {
+    text-decoration: none;
+}
+
 .dummy {
     background-color: pink;
 }
@@ -148,15 +152,17 @@ body {
 /*****************************************************************************/
 
 section() {
-    padding: 0 85px;
-    outline: 1px red solid;
+    padding: 0 85px 3em;
+    /*outline: 1px red solid;*/
 }
 
 .content {
     margin-left: $sidebar-width;
     overflow: auto;
+    min-height: 100%;
     background-color: #fff;
 
+    & > article,
     &-section {
         section();
     }
@@ -203,10 +209,11 @@ $fellow-margin = 20px;
 
 .fellow {
     &-section {
-        section();
-
+        /*section();*/
         overflow: auto;
     }
+
+    // Список участников
 
     &-list {
         padding: 0;
@@ -232,16 +239,16 @@ $fellow-margin = 20px;
         overflow: hidden;
         transition: box-shadow .2s;
 
+        &-picture {
+            display: block;
+            width: 100%;
+            margin-bottom: 1em;
+            border-radius: 1000px;
+        }
+
         &:hover {
             box-shadow: 0 2px 10px 0 yellow
         }
-    }
-
-    &-picture {
-        display: block;
-        width: 100%;
-        margin-bottom: 1em;
-        border-radius: 1000px;
     }
 
     &-name {
@@ -250,5 +257,110 @@ $fellow-margin = 20px;
         display: inline-block;
         height: 2.34em;
         /*padding: 1em 0 1em 0;*/
+    }
+
+    // Карточка участника
+
+    &-info {
+
+    }
+
+    &-profile {
+        overflow: hidden;
+        clear: both;
+
+        &-picture {
+            float: left;
+            width: 180px;
+            margin-right: 1.5em;
+            border-radius: 1000px;
+        }
+    }
+
+    &-social {
+        &-link {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            line-height: 24px;
+            text-align: center;
+            border-radius: 12px;
+            font-size: 12px;
+
+            margin-right: 1em;
+            border: 1px solid #aaa;
+            background-color: #aaa;
+            color: #fff;
+            font-weight: bold;
+        }
+    }
+}
+
+/*****************************************************************************/
+/*
+/* Forms
+/*
+/*****************************************************************************/
+
+input,
+textarea {
+    padding: 0.5em;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+
+    &:invalid {
+        border-color: red;
+    }
+
+    &:focus {
+        box-shadow: 0 0 6px 0 blue;
+        outline: none;
+    }
+}
+
+.login {
+    &-section  {
+        overflow: auto;
+
+        form {
+            font-size: 14px;
+
+            input {
+                margin: .24em;
+            }
+
+            label {
+                display: inline-block;
+                width: 140px;
+                /*text-align: right;*/
+            }
+        }
+    }
+}
+
+.oauth {
+    &-link {
+        display: inline-block;
+        margin-right: 0.67em;
+        padding: 0.34em 0.67em;
+        color: #fff;
+        border: 1px solid transparent;
+        border-radius: 4px;
+
+        &.facebook {
+            background-color: #3b5998;
+        }
+
+        &.google {
+            background-color: #c23321;
+        }
+
+        &.vk {
+            background-color: #344d6c;
+        }
+
+        &.github {
+            border-color: #7a7a7a;
+            color: #333;
+        }
     }
 }
