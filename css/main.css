@@ -20,6 +20,20 @@ body {
 .dummy {
   background-color: #ffc0cb;
 }
+body .facebook {
+  background-color: #3b5998;
+}
+body .google {
+  background-color: #c23321;
+}
+body .vk {
+  background-color: #344d6c;
+}
+body .github {
+  background-color: #fff;
+  border-color: #7a7a7a;
+  color: #333;
+}
 /*****************************************************************************/
 /*
 /* Sidebar
@@ -30,16 +44,15 @@ body {
   width: 300px;
   background-color: #222729;
 }
-.header :link {
+.header a:link,
+.header a:visited {
   color: rgba(255,255,255,0.75);
   text-decoration: none;
   -webkit-transition: color 0.2s;
   transition: color 0.2s;
 }
-.header :link:hover {
-  color: #fff;
-}
-.header :link:visited {
+.header a:link:hover,
+.header a:visited:hover {
   color: #fff;
 }
 .logo {
@@ -154,10 +167,6 @@ body {
 /* Fellows
 /*
 /*****************************************************************************/
-.fellow-section {
-/*section();*/
-  overflow: auto;
-}
 .fellow-list {
   padding: 0;
   list-style: none;
@@ -202,7 +211,8 @@ body {
 /*padding: 1em 0 1em 0;*/
 }
 .fellow-profile {
-  overflow: hidden;
+  overflow: auto;
+  margin-bottom: 2.5em;
   clear: both;
 }
 .fellow-profile-picture {
@@ -210,6 +220,9 @@ body {
   width: 180px;
   margin-right: 1.5em;
   border-radius: 1000px;
+}
+.fellow-social {
+  margin-bottom: 1.5em;
 }
 .fellow-social-link {
   display: inline-block;
@@ -219,11 +232,15 @@ body {
   text-align: center;
   border-radius: 12px;
   font-size: 12px;
-  margin-right: 1em;
-  border: 1px solid #aaa;
-  background-color: #aaa;
+  margin-right: 0.25em;
+  border-width: 1px;
+  border-style: solid;
   color: #fff;
   font-weight: bold;
+}
+.fellow-events-item-date {
+  font-size: 80%;
+  margin-right: 0.75em;
 }
 /*****************************************************************************/
 /*
@@ -266,17 +283,4 @@ textarea:focus {
   color: #fff;
   border: 1px solid transparent;
   border-radius: 4px;
-}
-.oauth-link.facebook {
-  background-color: #3b5998;
-}
-.oauth-link.google {
-  background-color: #c23321;
-}
-.oauth-link.vk {
-  background-color: #344d6c;
-}
-.oauth-link.github {
-  border-color: #7a7a7a;
-  color: #333;
 }

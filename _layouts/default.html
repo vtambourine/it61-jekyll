@@ -13,7 +13,7 @@
 <body>
 <header class="header">
   <h1 class="logo">
-    <a class="logo-link" href="/"><img class="logo-image" src="/images/logo-it61.png" alt="Ростовское IT-сообщество" width="80" height="80"></a>
+    <a class="logo-link" href="/"><img class="logo-image" src="{{ site.baseurl }}/images/logo-it61.png" alt="Ростовское IT-сообщество" width="80" height="80"></a>
     <div>Ростовское IT-сообщество</div>
   </h1>
 
@@ -24,12 +24,12 @@
         <img class="user-picture dummy"  width="48" height="48">
       </div>
     </div>
-    <div class="user-singin"><a href="/registration">Регистрация</a>  ●  <a href="/registration">Вход/Выход</a></div>
+    <div class="user-singin"><a href="{{ site.baseurl }}/registration">Регистрация</a>  ●  <a href="{{ site.baseurl }}/registration">Вход/Выход</a></div>
   </div>
 
   <nav class="navigation">
     <ul class="navigation-list">
-      <li class="navigation-item"><a class="navigation-link {% if page.section == 'events' %}active{% endif %}" href="{{ site.baseurl }}/events">Мероприятия</a></li>
+      <li class="navigation-item"><a class="navigation-link {% if page.section == 'events' %}active{% endif %}" href="{{ site.baseurl }}/">Мероприятия</a></li>
       <li class="navigation-item"><a class="navigation-link {% if page.section == 'community' %}active{% endif %}" href="{{ site.baseurl }}/fellows">Люди</a></li>
       <li class="navigation-item"><a class="navigation-link {% if page.section == 'sponsors' %}active{% endif %}" href="{{ site.baseurl }}/sponsors">Пожертвования</a></li>
       <li class="navigation-item"><a class="navigation-link {% if page.section == 'sponsors' %}active{% endif %}" href="{{ site.baseurl }}/sponsors">О сайте</a></li>
